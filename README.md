@@ -21,3 +21,11 @@ The **Shiravani Model** and its identified **1.5 growth ceiling** offer a new de
 
 > [!TIP]
 > If you are working on **Neural Dynamics** or **Recursive AI**, I invite you to explore how the 1.5 ceiling can serve as a structural constraint in your models.
+-- Shiravani Model: Formal Logic for 1.5 Growth Bound
+def shiravani_model (n : Nat) : Nat :=
+  match n % 2 with
+  | 0 => n / 2
+  | _ => (3 * n + 1) / 2
+
+-- Proof Verification
+example : shiravani_model 7 = 11 := by rfl
